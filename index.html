@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Downloader</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="flex justify-center items-center h-screen bg-purple-500">
+    <div class="container w-[320px] h-50 bg-white px-4  py-7 rounded-lg">
+      <h1 class="text-4xl text-center mb-7 text-purple-500">File Downloader</h1>
+      
+      <input type="text" name="fileInput" id="fileInput" placeholder="Enter A File Url" class="w-full h-14 rounded-lg px-4
+      py-4 text-blacn text-lg border border-black focus:border-purple-500 mb-5" />
+      
+      <button id="download-btn" class="w-full h-16 px-4 text-center text-white
+      bg-purple-500 rounded-lg">Download</button>
+      
+    <div class="w-full h-full bg-purple-500 py-4 px-7 mt-5 rounded-lg flex
+    hidden" id="status-con">
+      <h3 class="text-lg text-white">
+       <span id="status" class="ml-3">
+        </span>
+      </h3>
+    </div>
+    </div>
+  <script src="js/main.js"></script>
+  </body>
+</html>

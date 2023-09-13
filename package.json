@@ -1,0 +1,12 @@
+{
+  "name": "file_downloader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "data.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./css/input.css -o ./css/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
