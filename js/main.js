@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   downloadBtn.addEventListener('click', (e) => {
     e.preventDefault();
     if (navigator.onLine) {
-      downloadBtn.textContent = 'Downloadng File...'
+      downloadBtn.innerText = "Downloading file...";
+      fetchFile(fileInput.value);
     } else {
       downloadBtn.textContent = 'Download'
       statusContainer.classList.toggle('hidden')
@@ -19,12 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(url)
     .then(res => res.blob())
     .then(file => {
-      let tempUrl = URL.createObjectUrl(file);
+      let tempUrl = URL.createObjectURL(file);
       const a = document.createElement('a');
       a.href = tempUrl;
       a.download = url.replace(/^.*[\\\/]/, '');
       document.body.appendChild(a);
       a.click()
+      console.log('downlsded')
       downloadBtn.textContent = 'Download'
       URL.revokeObjectURL(tempUrl);
       
@@ -33,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(error => {
       alert("Failed to download file!");
       downloadBtn.innerText = "Download";
+      console.log(error)
     }) 
   }
   
